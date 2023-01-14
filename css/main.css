@@ -15,8 +15,17 @@ h3, h4 {
 
 .containet nav ul li{
 	display: inline-block;
-	padding: 10px 40px 10px 0px;
+	text-align: center;
+	padding: 10px;
 	cursor: pointer;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-weight: 600;
+	border: 2px black solid;
+	border-radius: 15px;
+}
+
+.containet nav ul li:active{
+	background-color: #ee5f22ec;
 }
 
 .product-img {
@@ -206,5 +215,15 @@ h3, h4 {
 		padding: 0;
 		margin: 0;
 		border: 0;
+	}
+}
+
+@media(max-width: 845px){
+	.containet nav ul{
+		padding: 0px;
+	}
+
+	.containet nav ul li{
+		margin-bottom: 5px;
 	}
 }
