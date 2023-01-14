@@ -1,5 +1,7 @@
 const productsContainer = document.querySelector('#products-container');
 
+
+
 // Запускаем getProducts
 getProducts();
 
@@ -15,7 +17,7 @@ async function getProducts() {
 
 function renderProducts(productsArray) {
     productsArray.forEach(function (item) {
-        const productHTML = `<div class="col-md-6">
+        const productHTML = `<div class="box ${item.class} col-md-6">
 						<div class="card mb-4" data-id="${item.id}">
 							<img class="product-img" src="img/roll/${item.imgSrc}" alt="">
 							<div class="card-body text-center">
@@ -47,4 +49,20 @@ function renderProducts(productsArray) {
 					</div>`;
         productsContainer.insertAdjacentHTML('beforeend', productHTML);
     });
+
+//----------------фільтр----------------//
+const filterBox = document.querySelectorAll('.box');
+document.querySelector('nav').addEventListener('click', event =>{
+	if(event.target.tagName !=='LI') return false;
+
+	let filterClass = event.target.dataset['filter'];
+	
+	filterBox.forEach( elem => {
+		elem.classList.remove('hide');
+		if(!elem.classList.contains(filterClass) && filterClass !== 'all') {
+			elem.classList.add('hide')
+		}
+	});
+});
+
 }

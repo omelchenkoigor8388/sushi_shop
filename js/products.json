@@ -1,6 +1,7 @@
 [
 	{
 		"id": 1,
+		"class": "philadelphia-hit",
 		"title": "Філадельфія хіт ролл",
 		"itemsInBox": 6,
 		"weight": 180,
@@ -9,6 +10,7 @@
 	},
 	{
 		"id": 2,
+		"class": "сalifornia",
 		"title": "Каліфорнія темпура",
 		"itemsInBox": 6,
 		"weight": 205,
@@ -17,6 +19,7 @@
 	},
 	{
 		"id": 3,
+		"class": "sealed-roll",
 		"title": "Запечений ролл «Каліфорнія»",
 		"itemsInBox": 6,
 		"weight": 182,
@@ -25,6 +28,7 @@
 	},
 	{
 		"id": 4,
+		"class": "philadelphia",
 		"title": "Філадельфія",
 		"itemsInBox": 6,
 		"weight": 230,
