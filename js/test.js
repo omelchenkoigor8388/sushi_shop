@@ -21,6 +21,9 @@ document.querySelector('.btn-primary').addEventListener('click', event =>{
 
     });
 
+
+    
+
     var token = '5610797462:AAG8xBcl76SAh3B2luqzlOGLfIMBFHQU_uE';
     var chat_id = -881956514;
     var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${sumPriseText}`
@@ -28,6 +31,8 @@ document.querySelector('.btn-primary').addEventListener('click', event =>{
     let api = new XMLHttpRequest();
     api.open("GET", url, true);
     api.send();
+
+    alert('Ваше замовлення прийняте')
 
 });
 
