@@ -1,8 +1,5 @@
 document.querySelector('.btn-primary').addEventListener('click', event =>{
     const counterWrapper = document.querySelectorAll('.cart-item');
-
-    let sumPrise = document.querySelector('.total-price');
-    let sumPriseText =' Всього : ' + sumPrise.textContent;
     
     counterWrapper.forEach((el) => {
         let name = el.querySelector('.cart-item__title');
@@ -21,8 +18,10 @@ document.querySelector('.btn-primary').addEventListener('click', event =>{
 
     });
 
+    let sumPrise = document.querySelector('.total-price');
+    let sumPriseText =' Всього : ' + sumPrise.textContent;
 
-    
+    alert('Ваше замовлення прийняте')
 
     var token = '5610797462:AAG8xBcl76SAh3B2luqzlOGLfIMBFHQU_uE';
     var chat_id = -881956514;
@@ -32,7 +31,7 @@ document.querySelector('.btn-primary').addEventListener('click', event =>{
     api.open("GET", url, true);
     api.send();
 
-    alert('Ваше замовлення прийняте')
+    
 
 });
 
