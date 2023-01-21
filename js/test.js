@@ -19,19 +19,26 @@ document.querySelector('.btn-primary').addEventListener('click', event =>{
     });
 
     let sumPrise = document.querySelector('.total-price');
-    let sumPriseText =' Всього : ' + sumPrise.textContent;
+    let sumPriseText =' Всього : ' + sumPrise.textContent + '₴';
+
+    let phone = document.querySelector("input[name='example']").value;
+    let phoneText =' Номер телефону : ' + phone;
+
+    let citi = document.querySelector("input[name='example_1']").value;
+    let citiText =' Пункт призначення : ' + citi;
 
     alert('Ваше замовлення прийняте')
 
     var token = '5610797462:AAG8xBcl76SAh3B2luqzlOGLfIMBFHQU_uE';
     var chat_id = -881956514;
-    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${sumPriseText}`
+    var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${citiText}%0A${phoneText}%0A${sumPriseText}`
 
     let api = new XMLHttpRequest();
     api.open("GET", url, true);
     api.send();
-
-    
-
 });
+
+
+
+
 
